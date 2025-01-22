@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block content %}
+
+	<img style="max-width: 500px;" src="{{ project.feature_image.url }}" alt="Image">
+
+	<h1>{{ project.title }}</h1>
+	<p>{{ project.description }}</p>
+	<small>ID: {{ project.id }}</small>
+
+	<ul>
+		{% for tag in project.tags.all %}
+			<li>{{ tag.name }}</li>
+		{% endfor %}
+	</ul>
+
+{% endblock  %}
