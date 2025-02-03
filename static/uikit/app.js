@@ -1,4 +1,13 @@
 // Invoke Functions Call on Document Loaded
 document.addEventListener('DOMContentLoaded', function () {
-  hljs.highlightAll();
+	hljs.highlightAll();
 });
+
+let alertWrapper = document.querySelector('.alert');
+let alertClose = document.querySelector('.alert-close');
+
+if (alertWrapper) {
+	alertClose.addEventListener('click', function () {
+		alertWrapper.style.display = 'none';
+	});
+}

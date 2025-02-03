@@ -12,3 +12,5 @@ __pycache__/
 
 static/images/profile/
 **/profile/
+
+*-copy*
